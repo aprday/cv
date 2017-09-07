@@ -9,8 +9,10 @@ config.title = title;
 
 pipe.match('./src', /[a-zA-Z]*.less$/g).use(function (src, path, callback) {
     less.render(src, function (e, res) {
-        callback(res.css);
+        callback(res.css, path);
     });
+}).use(function (src, path, callback) {
+    callback(src, path);
 }).dest('./dist/css', '.css');
 
 pipe.match('./src/pug/index.pug', false).use(function (src, path, callback) {

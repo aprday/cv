@@ -20,6 +20,10 @@
 body {
   font-family: 'lato-light', Helvetica Neue, Helvetica, '微软雅黑', Arial, sans-serif;
 }
+#container {
+  max-width: 618px;
+  margin: auto auto;
+}
 ol,
 ul,
 li {

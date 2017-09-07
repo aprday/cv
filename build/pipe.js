@@ -9,7 +9,12 @@ function Task(src, reg) {
 
 Task.prototype.use = function (callback) {
     const self = this;
-    this.queue.push(callback);
+    const fn = function (next) {
+        return function (str, path) {
+            callback(str, path, next);
+        };
+    };
+    this.queue.push(fn);
     return this;
 }
 Task.prototype.run = function (path, ext) {
@@ -23,9 +28,10 @@ Task.prototype.run = function (path, ext) {
             if (self.queue.length > 0) {
                 const str = buffer.toString();
                 self.queue.push(self.deploy(filePath, path, ext));
-                self.queue.reverse().reduceRight(function (previousCall, currentCall) {
-                    previousCall(str, filePath, currentCall);
+                var dispatch = self.queue.reduceRight(function (previousCall, currentCall) {
+                    return currentCall(previousCall);
                 });
+                dispatch(str, filePath);
             } else {
                 self.deploy(filePath, path, ext)(buffer)
             }
