@@ -57,12 +57,11 @@ Task.prototype.dest = function (path, ext) {
 }
 
 const Pipe = function () {
-    this.src = '';
-    this.reg = '';
+    this.descript = Math.random();
 }
 
 Pipe.prototype.match = function (src, reg) {
-    return new Task(src, reg);
+    return new Task(src, reg, this.descript);
 }
 
 function readFilePaths(filePath, reg) {
