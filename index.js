@@ -7,13 +7,13 @@ const title = pkg.htmlTitle;
 
 config.title = title;
 
-pipe.match('./src', /[a-zA-Z]*.less$/g, function (src, path, callback) {
+pipe.match('./src', /[a-zA-Z]*.less$/g).use(function (src, path, callback) {
     less.render(src, function (e, res) {
         callback(res.css);
     });
 }).dest('./dist/css', '.css');
 
-pipe.match('./src/pug/index.pug', false, function (src, path, callback) {
+pipe.match('./src/pug/index.pug', false).use(function (src, path, callback) {
     const compiledFunction = pug.compileFile(path);
     const output = compiledFunction(config);
     callback(output);

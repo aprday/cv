@@ -7,13 +7,15 @@
   "devDependencies": {
     "bootstrap": "^4.0.0-beta",
     "jade": "^1.11.0",
+    "less": "^2.7.2",
     "pug": "^2.0.0-rc.3"
   },
   "scripts": {
+    "build": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "configPath": "./config.sider.json",
+  "configPath": "./config.json",
   "htmlTitle": "简历"
 }

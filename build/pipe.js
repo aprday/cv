@@ -1,64 +1,68 @@
 const fs = require('fs');
 const path = require('path');
 
-function Task(filePaths) {
-    this.filePaths = filePaths;
-    this.destPath = '';
-    this.destExt = '';
+function Task(src, reg) {
+    this.src = src;
+    this.reg = reg;
+    this.queue = []
 }
 
-const Pipe = function () {
-    this.filePaths = [];
-    this.tasks = [];
-    this.dests = [];
-    this.destPath = '';
-    this.destExt = '';
+Task.prototype.use = function (callback) {
+    const self = this;
+    this.queue.push(callback);
+    return this;
 }
-Pipe.prototype.deploy = function (filePath, index) {
+Task.prototype.run = function (path, ext) {
+    const self = this;
+    const filePaths = readFilePaths(self.src, self.reg);
+    filePaths.forEach(function (filePath, index) {
+        fs.readFile(filePath, function (err, buffer) {
+            if (err) {
+                throw err;
+            }
+            if (self.queue.length > 0) {
+                const str = buffer.toString();
+                self.queue.push(self.deploy(filePath, path, ext));
+                self.queue.reverse().reduceRight(function (previousCall, currentCall) {
+                    previousCall(str, filePath, currentCall);
+                });
+            } else {
+                self.deploy(filePath, path, ext)(buffer)
+            }
+        });
+    });
+}
+
+Task.prototype.deploy = function (filePath, destPath, ext) {
     const self = this;
     return function (buffer) {
         const fileName = path.parse(filePath).name;
         const fileExt = path.parse(filePath).ext;
-        self.tasks.forEach(function (task) {
-            if (~task.filePaths.indexOf(filePath)) {
-                mkdirs(task.dest,0777, function () {
-                    const ext = task.ext || fileExt;
-                    const destPath = task.dest + '/' + fileName + ext;
-                    fs.writeFile(destPath, buffer, (err) => {
-                        if (err) {
-                            throw err;
-                        }
-                        console.log(filePath, '->', destPath);
-                    });
-                })
-            }
-        });
-        
-    }
+        mkdirs(destPath, 0777, function () {
+            ext = ext || fileExt;
+            destPath = destPath + '/' + fileName + ext;
+            fs.writeFile(destPath, buffer, (err) => {
+                if (err) {
+                    throw err;
+                }
+                console.log(filePath, '->', destPath);
+            });
+        })
+    };
 }
-Pipe.prototype.match = function (filePath, reg, callback) {
+Task.prototype.dest = function (path, ext) {
     const self = this;
-    const filePaths = readFilePaths(filePath, reg);
-    const task = new Task(filePaths);
-    self.tasks.push(task);
-    filePaths.forEach(function (file, index) {
-        fs.readFile(file, function (err, buffer) {
-            if (err) throw err;
-            if (typeof callback === 'function') {
-                callback(buffer.toString(), filePath, self.deploy(file, index));
-            } else {
-                self.deploy(file, index)(buffer)
-            }
-        });
-    });
+    self.run(path, ext);
     return this;
 }
 
-Pipe.prototype.dest = function (destPath, ext) {
-    const task = this.tasks.pop();
-    task.dest = destPath;
-    task.ext = ext;
-    this.tasks.push(task);
+const Pipe = function () {
+    this.src = '';
+    this.reg = '';
+}
+
+Pipe.prototype.match = function (src, reg) {
+    return new Task(src, reg);
 }
 
 function readFilePaths(filePath, reg) {
