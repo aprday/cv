@@ -1,0 +1,19 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "jade": "^1.11.0",
+    "pug": "^2.0.0-rc.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "configPath": "./config.sider.json",
+  "htmlTitle": "简历"
+}
