@@ -2,14 +2,14 @@
 
 简易简历生成器，由json简单配置
 
-启动方式
+### 启动方式
 
 ```
     npm i
     npm run build
 ```
 
-config.json
+### config.json
 
 ```
     {
@@ -108,7 +108,7 @@ config.json
     }
 ```
 
-config 路径配置
+### config 路径配置
 
 在package.json加入
 
