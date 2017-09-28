@@ -2,6 +2,12 @@
 
 简易简历生成器，由json简单配置
 
+### 预览
+
+<http://www.songxuemeng.com/cv/>
+
+<http://www.songxuemeng.com/cv/sider>
+
 ### 启动方式
 
 ```
