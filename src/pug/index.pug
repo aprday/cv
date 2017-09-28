@@ -74,8 +74,13 @@ block experience
                     - var content = item.content;
                     if Array.isArray(content)
                         ul
-                            each text in content
-                                li.list= text
+                            each block in content
+                                - var title = block.title;
+                                - var list  = block.list;
+                                li.list= title
+                                ul
+                                    each text in list
+                                        li= text
                     else
                         span= content
                 
@@ -111,7 +116,7 @@ block project
         each item in projects
             .subsection
                 span.title.divider= item.title
-                span.descript= item.descript
+                a(href= item.descript).descript= item.descript
                 .content
                     - var content = item.content;
                     if Array.isArray(content)

@@ -17,6 +17,7 @@ Task.prototype.use = function (callback) {
     this.queue.push(fn);
     return this;
 }
+
 Task.prototype.run = function (path, ext) {
     const self = this;
     const filePaths = readFilePaths(self.src, self.reg);

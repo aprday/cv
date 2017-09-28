@@ -15,10 +15,10 @@ pipe.match('./src', /[a-zA-Z]*.less$/g).use(function (src, path, callback) {
     callback(src, path);
 }).dest('./dist/css', '.css');
 
-pipe.match('./src/pug/index.pug', false).use(function (src, path, callback) {
+pipe.match('./src/pug/index.pug').use(function (src, path, callback) {
     const compiledFunction = pug.compileFile(path);
     const output = compiledFunction(config);
     callback(output);
 }).dest('./dist', '.html');
 
-pipe.match('./src/assert/', false).dest('./dist/static');
+pipe.match('./src/assert/').dest('./dist/static');
