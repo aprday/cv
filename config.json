@@ -3,32 +3,27 @@
     "descript": "吉林大学 · 软件工程",
     "email": "sunxiaoxujlu@163.com",
     "mobile": "18844195530",
-    "website": "http://www.yusha.com",
+    "website": "http://aprday.github.io",
     "experiences": [{
         "title": "百度",
         "descript": "金融数据智能部 + FE",
         "date": "Jul 2016 – Present",
         "location": "中国, 北京",
         "content": [{
-            "title": "组件开发",
-            "list": [
-                "1）UI样式库，基于bootstrap4，探索响应式布局的解决方案，借鉴ant design，material design, 使用flex/rem等技术，修改部分代码，开发了PC后端统一UI样式库bootstrap-customize，提升了导流投放等系统的用户体验。",
-                "2）编辑器开发，为满足内容获客与EDM营销需求，基于draftJS，调研了知乎编辑器、Ueditor等，根据具体需求开发了PC端和移动端通用的编辑器draft-editor。",
-                "3）根据导流投放，内容获客快速搭建页面的需要，抽取项目中的组件，开发了UploaderJs(封装WebuploaderJs的上传插件)， Tree/TreeSelect(树状组件和树状选择组件)，Cascader/CascaderSelect(级联组件)，Select(选择组件)， 下拉菜单（Dropdown），Validator（表单校验），（单选框、复选框、开关），Spinner（进度条），toast（通知提醒框），Tooltip（提示），Modal（弹框），Table（表格），Datetimepicker（日期时间选择）；"
-            ]
+            "title": "智能获客-伯乐系统",
+            "info": "通过潜客挖掘、潜客管理、潜客触达，实现智能获客实验线上全流程管理及效果数据跟踪的平台工具。伯乐平台提高了获客效率和用户转化率，把现金贷触达周期，从1-2两周缩短至3天，累计用信人数超过30万",
+            "duty": "承担了伯乐系统的开发工作。作为伯乐平台的前端负责人，承担了项目的主要模块的开发",
+            "list": ["结合webpack在项目中的实际应用，抽取共有配置部分，提出了一套基于webpack的前端构建工具lucii，通过简单的配置，可以完成调试，打包，代理，mock数据和发布代码功能，由JSON的形式配置Api，可以简单快捷的构建项目,提高了伯乐平台的编译稳定行，降低了50%的构建时间",
+            "承担EDM营销系统的前端工作，调研并接入了VueJs/React等前端框架，搭建了整个项目的构建工具以及fis3-parser-vue-loader和webpack-add-assert-plugin等前端构建工具的插件，使得组内人员可以在高工作效率下保证产品的性能及用户体验"]
+            
         }, {
-            "title": "工程化实践",
-            "list": [
-                "1）结合webpack在项目中的实际应用，抽取共有配置部分，提出了一套基于webpack的前端构建工具lucii，通过简单的配置，可以完成调试，打包，代理，mock数据和发布代码功能，由JSON的形式配置Api，可以简单快捷的构建项目,提高了伯乐平台的编译稳定行，降低了50%的构建时间",
-                "2）因为内容获客项目接入Vue做技术升级，而fis3不支持单文件编译，所以参考vue-loader源码，结合fis3的编译特性在fis3 parse阶段针对vue文件中的style/template/script标签而编写解析的工具fis3-parser-vue-loader",
-                "3）开发了基于node的前端项目初始化脚手架工具cli，配和智能获客和导流项目以及其他组内项目页面的快速搭建"
-            ]
-        }, {
-            "title": "业务方向",
-            "list": [
-                "1）在金融智能数据部承担了伯乐系统的开发工作。伯乐平台是为智能获客在潜客挖掘、潜客管理、触达获客名单的决策及优化中提供各类数据支持，实现智能获客实验线上全流程管理及效果数据跟踪的平台工具。作为伯乐平台的前端负责人，承担了项目的主要需求并且搭建了整个项目的构建工具，使得组内人员可以在高工作效率下保证产品的性能及用户体验",
-                "2）承担金融商业平台系统的前端工作，包括导流获客系统、内容获客平台、落地页。"
-            ]
+            "title": "智能获客-内容获客系统",
+            "info": "通过高响应人群白名单，获取用户感兴趣的文章通过nlp语言处理生成高质软文，智能发布到百家号。通过feed的文章曝光展示，提高了用户转化率和流量曝光",
+            "duty": "承担了内容获客所有技术难点的攻克, 独立完成了整个项目的代码结构和框架的搭建，基于VueJs打造了一个简易版前端编辑器并且在项目中接入NodeJs进行文章主题结构的抓取解析，文章内容保存同步等模块的开发。"
+        },  {
+            "title": "智能导流-导流营销系统",
+            "info": "综合统一管理客户物料，提高了机构广告投放效率，快速实现流量价值。累计接入7个渠道，70多家机构，曝光2KW/日",
+            "duty": "承担导流营销系统的前端工作, 根据项目需求，抽取项目中的公用组件，基于bootstrap样式开发组件样式库vue-bootstrap"
         }]
     }],
     "internships": [{
@@ -56,7 +51,7 @@
         "descript": "https://github.com/luciijs",
         "content": "一套对Webpack2打包过程的轻封装,集成了调试,打包,代理,mock数据和发布代码功能，由JSON的形式配置Api,可以简单快捷的使用lucii构建项目"
     }, {
-        "title": "vue-bootstrap",
+        "title": "Vue-bootstrap",
         "descript": "https://github.com/aprday/vue-bootstrap",
         "content": "基于Vue开发的组件库，样式使用bootstrap，封装了项目中常见组件以及高级组件(table/editor等)"
     }, {
@@ -64,24 +59,24 @@
         "descript": "https://github.com/aprday/pipe",
         "content": "类似Gulp的异步文件处理器，使得文件构建和处理插件可以以中间件的方式调用"
     }, {
-        "title": "atom-xterms-plugin",
-        "descript": "http://www.songxuemeng.com/atom-xterms-plugin",
-        "content": "atom插件可以，提供了可以随意切换的终端控制台，样式类似于vscode terminal"
+        "title": "Atom-xterm-plugin",
+        "descript": "http://github.com/aprday/atom-xterm-plugin",
+        "content": "atom插件，提供了可以随意切换的终端控制台，样式类似于vscode terminal"
     }, {
-        "title": "atom-fecs-plugin",
+        "title": "Atom-fecs-plugin",
         "descript": "https://github.com/aprday/atom-fecs-plugin",
         "content": "atom插件，封装了fecs，可以在保存代码时完成icode代码检查工作，风格错误提示界面和icode保持一直，相比其他插件更加简单易用"
     }, {
-        "title": "vscode-fecs-plugin",
+        "title": "Vscode-fecs-plugin",
         "descript": "https://github.com/aprday/vscode-fecs-plugin",
         "content": "vscode的fecs代码风格检查插件，在Windows和Mac上都有很好的兼容性"
     },{
         "title": "REACT-EDITOR",
-        "descript": "http://www.songxuemeng.com/react-editor",
+        "descript": "http://aprday.github.io/react-editor",
         "content": "基于DraftJs打造的编辑器"
     },{
         "title": "MY DIARY",
-        "descript": "http://www.songxuemeng.com/diary",
+        "descript": "http://aprday.github.io/diary",
         "content": "一个在线日记生成系统,修改自github上的一个开源项目,改变了原有的Hexo模式的Markdown预编译,动态加载Markdown并翻译成html文本,使用者只需编写上传Markdown文件就可以在线查看"
     },{
         "title": "TplJs",
@@ -96,6 +91,6 @@
         "熟悉已标准化的HTML5/CSS3新特性，熟悉ECMAScript（JavaScript）面向对象，能完成桌面 / 移动端前端组件与 AJAX 数据交互的开发",
         "熟悉jQuery/AngularJs/VueJs的使用,阅读过部分源代码,了解过React的简单使用,使用过 Less 等预处理工具",
         "了解后端编程,熟悉J2EE/PHP,有使用Servelet/Struts/Thinkphp的后台框架进行开发的经验",
-        "熟练使用 MySQL/Oracle数据库，掌握基本Sql语句，了解Nosql数 据库, Linux使用经验，熟悉常用命令与配置，编写简单的 Shell 脚本"
+        "熟练使用 MySQL/Oracle数据库，掌握基本Sql语句，了解Nosql数据库, Linux使用经验，熟悉常用命令与配置，编写简单的 Shell 脚本"
     ]
 }

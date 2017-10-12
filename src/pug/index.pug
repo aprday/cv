@@ -52,9 +52,19 @@ block header
         .name #{name}
         .descript.red #{descript}
         .descript
-            .website.divider #{website}
+            a(href= website,target= '_blank').website.divider #{website}
             .email.divider #{email}
             .mobile #{mobile}
+
+
+mixin list(content)
+    if Array.isArray(content)
+        ul
+            each list in content
+                li.arrow
+                    +list(list)
+    else
+        span= content
 
 block experience
     section
@@ -75,12 +85,18 @@ block experience
                     if Array.isArray(content)
                         ul
                             each block in content
-                                - var title = block.title;
-                                - var list  = block.list;
-                                li.list= title
-                                ul
-                                    each text in list
-                                        li= text
+                                if typeof block ===  'string'
+                                    li.list= block
+                                else
+                                    - var title = block.title;
+                                    - var list  = block.list;
+                                    - var info = block.info;
+                                    - var duty = block.duty;
+                                    li
+                                        h4.list= title
+                                        div.info= info
+                                        div.duty= duty
+                                        +list(list)
                     else
                         span= content
                 
@@ -116,7 +132,7 @@ block project
         each item in projects
             .subsection
                 span.title.divider= item.title
-                a(href= item.descript).descript= item.descript
+                a(href= item.descript, target= '_blank').descript= item.descript
                 .content
                     - var content = item.content;
                     if Array.isArray(content)

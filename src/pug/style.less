@@ -48,11 +48,18 @@ ol, ul, li {
     padding: 0;
     list-style: none;
 }
+h1, h2, h3, h4, h5, h6 {
+    margin: 8px 0;
+}
 hr {
     background: @underline;
 }
 section {
     padding-top: @vmargin;
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }
 .header {
     text-align: center;
@@ -123,6 +130,33 @@ section {
         margin-right: 16px;
     }
 }
+.arrow {
+    &::before {
+        content: '\f105';
+        font-size: 2px;
+        font-family: 'font-awesome';
+        display: inline-block;
+        margin-right: 16px;
+    }
+}
+.info {
+    &::before {
+        content: '\f05a';
+        font-size: 13px;
+        font-family: 'font-awesome';
+        display: inline-block;
+        margin-right: 16px;
+    }
+}
+.duty {
+    &::before {
+        content: '\f2bd';
+        font-size: 12px;
+        font-family: 'font-awesome';
+        display: inline-block;
+        margin-right: 16px;
+    }
+}
 .center {
     display: inline-block;
 }
@@ -142,8 +176,8 @@ section {
     }
 }
 #footer {
-    margin-top: @vmargin;
-    margin-bottom: @vmargin;
+    margin-left: @hmargin;
+    margin-right: @hmargin;
     position: relative;
     text-align: center;
     .date {
@@ -230,15 +264,6 @@ section {
         padding-right: @vSmallMargin;
     }
 }
-.internship {
-    &::before {
-        content: '\f135';
-        font-size: 16px;
-        font-family: 'font-awesome';
-        display: inline-block;
-        padding-right: @vSmallMargin;
-    }
-}
 .project {
     &::before {
         content: '\f0ad';
@@ -305,9 +330,4 @@ section {
         margin-left: @vSmallMargin;
         margin-right: @vSmallMargin;
     }
-}
-
-#footer {
-    margin-left: @hmargin;
-    margin-right: @hmargin;
 }
