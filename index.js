@@ -7,18 +7,22 @@ const title = pkg.htmlTitle;
 
 config.title = title;
 
-pipe.match('./src', /[a-zA-Z]*.less$/g).use(function (src, path, callback) {
-    less.render(src, function (e, res) {
-        callback(res.css, path);
+pipe.match('./src', /[a-zA-Z]*.less$/g).use(function (file, callback) {
+    const {str, filePath} = file;
+    less.render(str, function (e, res) {
+        callback(res.css, filePath);
     });
-}).use(function (src, path, callback) {
-    callback(src, path);
+}).use(function (src, callback) {
+    callback(src);
 }).dest('./dist/css', '.css');
 
-pipe.match('./src/pug/index.pug').use(function (src, path, callback) {
-    const compiledFunction = pug.compileFile(path);
+pipe.match('./src/pug/index.pug').use(function (file, callback) {
+    const {str, filePath} = file;
+    const compiledFunction = pug.compileFile(filePath);
     const output = compiledFunction(config);
     callback(output);
 }).dest('./dist', '.html');
 
 pipe.match('./src/assert/').dest('./dist/static');
+
+pipe.server(__dirname, 3000);

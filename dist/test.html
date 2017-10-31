@@ -1,0 +1,28 @@
+<!-- <div id="wrap">
+    <div id="content">content</div>
+    <div id="side">side</div>
+</div>
+<style>
+/* // 方案一 */
+/* #wrap { position: relative; background: red;}
+#content { height: 100%; margin-left: 200px; background: blue;}
+#side { height: 100%; width: 200px; position: absolute; top: 0; background: yellow;} */
+
+/* // 方案二 */
+#wrap { margin-right: 200px; background: red;}
+#content { height: 100%; float: right; width: 100%; margin-right: -200px; background: blue;}
+#side { height: 100%; float: left; width: 200px; background: yellow;}
+</style> -->
+
+<div class="side side-left" style="background: red">afaefe</div>
+<div class="main">固定960宽度</div>
+<div class="side side-right" style="background: blue">afaefaef</div>
+<div>123456</div>
+<style>
+body {margin:0; padding:0; height: 100%}
+.side-left {float:left; width:50%; margin-left:-481px; padding-right:-481px;}
+/* // IE6、7下有宽度计算问题 */
+.side-right {float:left; width:50%; margin-right:-481px}
+/* // 注意设置z-index */
+.main {float:left; width:900px; position:relative; z-index:2}
+</style>

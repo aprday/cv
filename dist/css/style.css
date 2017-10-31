@@ -12,8 +12,8 @@
 }
 @font-face {
   font-family: 'font-awesome';
-  src: url('../static/fontawesome-webfont.eot?v=4.7.0');
-  src: url('../static/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../static/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../static/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../static/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../static/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  src: url('../static/fontawesome-webfont.eot');
+  src: url('../static/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../static/fontawesome-webfont.woff2') format('woff2'), url('../static/fontawesome-webfont.woff') format('woff'), url('../static/fontawesome-webfont.ttf') format('truetype'), url('../static/fontawesome-webfont.svg#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -110,33 +110,40 @@ a {
   color: #2b2b2b;
   margin: 16px 0;
 }
-.list::before {
+.list-item::before {
   content: '\f0da';
-  font-size: 4px;
+  width: 16px;
+  font-size: 14px;
   font-family: 'font-awesome';
   display: inline-block;
-  margin-right: 16px;
+  margin-right: 8px;
+}
+.list {
+  margin: 8px 16px;
 }
 .arrow::before {
   content: '\f105';
-  font-size: 2px;
+  width: 16px;
+  font-size: 12px;
   font-family: 'font-awesome';
   display: inline-block;
-  margin-right: 16px;
+  margin-right: 8px;
 }
 .info::before {
   content: '\f05a';
   font-size: 13px;
+  width: 16px;
   font-family: 'font-awesome';
   display: inline-block;
-  margin-right: 16px;
+  margin-right: 8px;
 }
 .duty::before {
   content: '\f2bd';
   font-size: 12px;
+  width: 16px;
   font-family: 'font-awesome';
   display: inline-block;
-  margin-right: 16px;
+  margin-right: 8px;
 }
 .center {
   display: inline-block;

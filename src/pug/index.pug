@@ -59,7 +59,7 @@ block header
 
 mixin list(content)
     if Array.isArray(content)
-        ul
+        ul.list
             each list in content
                 li.arrow
                     +list(list)
@@ -86,14 +86,14 @@ block experience
                         ul
                             each block in content
                                 if typeof block ===  'string'
-                                    li.list= block
+                                    li.list-item= block
                                 else
                                     - var title = block.title;
                                     - var list  = block.list;
                                     - var info = block.info;
                                     - var duty = block.duty;
                                     li
-                                        h4.list= title
+                                        h4.list-item= title
                                         div.info= info
                                         div.duty= duty
                                         +list(list)
@@ -120,7 +120,7 @@ block internship
                     if Array.isArray(content)
                         ul
                             each text in content
-                                li.list= text
+                                li.list-item= text
                     else
                         span= content
 block project
@@ -138,7 +138,7 @@ block project
                     if Array.isArray(content)
                         ul
                             each text in content
-                                li.list= text
+                                li.list-item= text
                     else
                         span= content
 
