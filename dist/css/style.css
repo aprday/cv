@@ -110,19 +110,15 @@ a {
   color: #2b2b2b;
   margin: 16px 0;
 }
-.list-item::before {
-  content: '\f0da';
-  width: 16px;
-  font-size: 14px;
-  font-family: 'font-awesome';
-  display: inline-block;
-  margin-right: 8px;
+.list-item {
+  list-style: initial;
 }
 .list {
-  margin: 8px 16px;
+  margin: 8px 0px;
+  padding-left: 24px;
 }
 .arrow::before {
-  content: '\f105';
+  content: '\f0da';
   width: 16px;
   font-size: 12px;
   font-family: 'font-awesome';
