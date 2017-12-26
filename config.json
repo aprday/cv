@@ -3,7 +3,7 @@
     "descript": "吉林大学 · 软件工程",
     "email": "sunxiaoxujlu@163.com",
     "mobile": "18844195530",
-    "website": "http://aprday.github.io",
+    "website": "http://sophiasofar.github.io",
     "experiences": [{
         "title": "百度",
         "descript": "金融数据智能部 + FE",
@@ -52,39 +52,39 @@
         "content": "一套对Webpack2打包过程的轻封装,集成了调试,打包,代理,mock数据和发布代码功能，由JSON的形式配置Api,可以简单快捷的使用lucii构建项目"
     }, {
         "title": "Vue-bootstrap",
-        "descript": "https://github.com/aprday/vue-bootstrap",
+        "descript": "https://github.com/sophiasofar/vue-bootstrap",
         "content": "基于Vue开发的组件库，样式使用bootstrap，封装了项目中常见组件以及高级组件(table/editor等)"
     }, {
         "title": "PipeJs",
-        "descript": "https://github.com/aprday/pipe",
+        "descript": "https://github.com/sophiasofar/pipe",
         "content": "类似Gulp的异步文件处理器，使得文件构建和处理插件可以以中间件的方式调用"
     }, {
         "title": "Atom-xterm-plugin",
-        "descript": "http://github.com/aprday/atom-xterm-plugin",
+        "descript": "http://github.com/sophiasofar/atom-xterm-plugin",
         "content": "atom插件，提供了可以随意切换的终端控制台，样式类似于vscode terminal"
     }, {
         "title": "Atom-fecs-plugin",
-        "descript": "https://github.com/aprday/atom-fecs-plugin",
+        "descript": "https://github.com/sophiasofar/atom-fecs-plugin",
         "content": "atom插件，封装了fecs，可以在保存代码时完成icode代码检查工作，风格错误提示界面和icode保持一直，相比其他插件更加简单易用"
     }, {
         "title": "Vscode-fecs-plugin",
-        "descript": "https://github.com/aprday/vscode-fecs-plugin",
+        "descript": "https://github.com/sophiasofar/vscode-fecs-plugin",
         "content": "vscode的fecs代码风格检查插件，在Windows和Mac上都有很好的兼容性"
     },{
         "title": "REACT-EDITOR",
-        "descript": "http://aprday.github.io/react-editor",
+        "descript": "http://sophiasofar.github.io/react-editor",
         "content": "基于DraftJs打造的编辑器"
     },{
         "title": "MY DIARY",
-        "descript": "http://aprday.github.io/diary",
+        "descript": "http://sophiasofar.github.io/diary",
         "content": "一个在线日记生成系统,修改自github上的一个开源项目,改变了原有的Hexo模式的Markdown预编译,动态加载Markdown并翻译成html文本,使用者只需编写上传Markdown文件就可以在线查看"
     },{
         "title": "TplJs",
-        "descript": "https://github.com/aprday/tpl",
+        "descript": "https://github.com/sophiasofar/tpl",
         "content": "源于20行代码打造一个模板引擎，加上一点个人思考生成的项目。可以用来编译类似underscore的模板语言。"
     },{
         "title": "CV",
-        "descript": "https://github.com/aprday/cv",
+        "descript": "https://github.com/sophiasofar/cv",
         "content": "简历生成器, 根据Json的简单配置，在加上个人打造的文件处理器,可以快速打造个人简历"
     }],
     "skills": [
