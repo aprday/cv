@@ -56,6 +56,7 @@ a {
   font-family: 'lato-light';
   font-size: 40px;
   line-height: 56px;
+  display: inline-block;
 }
 .heading {
   color: #6A6A6A;
@@ -79,7 +80,7 @@ a {
   width: 100%;
   display: inline-block;
   position: absolute;
-  bottom: 6px;
+  bottom: 3px;
   left: 0;
   height: 1px;
   background: #ccc;
@@ -94,13 +95,13 @@ a {
   font-family: 'lato-regular';
 }
 .descript {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 16px;
   color: #6A6A6A;
 }
 .location,
 .date {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 16px;
   color: #6A6A6A;
 }
@@ -111,41 +112,18 @@ a {
   margin: 16px 0;
 }
 .list-item {
-  list-style: initial;
+  list-style: none;
+  position: relative;
 }
 .list {
   margin: 8px 0px;
   padding-left: 24px;
 }
-.arrow::before {
-  content: '\f0da';
-  width: 16px;
-  font-size: 12px;
-  font-family: 'font-awesome';
-  display: inline-block;
-  margin-right: 8px;
-}
-.info::before {
-  content: '\f05a';
-  font-size: 13px;
-  width: 16px;
-  font-family: 'font-awesome';
-  display: inline-block;
-  margin-right: 8px;
-}
-.duty::before {
-  content: '\f2bd';
-  font-size: 12px;
-  width: 16px;
-  font-family: 'font-awesome';
-  display: inline-block;
-  margin-right: 8px;
-}
 .center {
   display: inline-block;
 }
 .red {
-  color: #DC3522;
+  color: #C46767;
 }
 #content {
   margin-left: 24px;
@@ -184,7 +162,7 @@ a {
 }
 .email::before {
   content: '\f0e0';
-  font-size: 12px;
+  font-size: 13px;
   font-family: 'font-awesome';
   display: inline-block;
   padding-right: 4px;
@@ -193,8 +171,8 @@ a {
   display: inline-block;
 }
 .mobile::before {
-  content: '\f10b';
-  font-size: 12px;
+  content: '\f095';
+  font-size: 13px;
   font-family: 'font-awesome';
   display: inline-block;
   padding-right: 4px;
@@ -204,29 +182,50 @@ a {
 }
 .website::before {
   content: '\f015';
-  font-size: 12px;
+  font-size: 13px;
   font-family: 'font-awesome';
   display: inline-block;
   padding-right: 4px;
 }
+.age {
+  display: inline-block;
+}
+.age::before {
+  content: '\f2c2';
+  font-size: 13px;
+  font-family: 'font-awesome';
+  display: inline-block;
+  padding-right: 4px;
+}
+.space {
+  display: inline-block;
+  width: 32px;
+}
 .divider {
   display: inline-block;
 }
-.divider::after {
+.divider::before {
   content: '';
-  margin: 0 16px;
+  margin: 0 8px;
   display: inline-block;
   height: 10px;
   line-height: 16px;
   width: 1px;
   background: #6A6A6A;
 }
-.point::before {
+.check::before {
   content: '\f00c';
   font-size: 4px;
   font-family: 'font-awesome';
   display: inline-block;
-  margin-right: 12px;
+  margin-right: 13px;
+}
+.circle::before {
+  content: '\f10c';
+  font-size: 4px;
+  font-family: 'font-awesome';
+  display: inline-block;
+  margin-right: 13px;
 }
 .experience::before {
   content: '\f0b1';
@@ -256,8 +255,22 @@ a {
   display: inline-block;
   padding-right: 4px;
 }
+.honor::before {
+  content: '\f091';
+  font-size: 16px;
+  font-family: 'font-awesome';
+  display: inline-block;
+  padding-right: 4px;
+}
+.star::before {
+  content: '\f005';
+  font-size: 4px;
+  font-family: 'font-awesome';
+  display: inline-block;
+  margin-right: 13px;
+}
 .github::before {
-  content: '\f09b';
+  content: '\f1d3';
   font-size: 14px;
   font-family: 'font-awesome';
   display: inline-block;

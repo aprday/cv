@@ -14,7 +14,7 @@ function stat(file) {
     });
 }
 
-module.exports = function (dirname, port) {
+module.exports = function (dirname, port, callback) {
     const app = new koa();
     const {extname, join} = path;
     app.use(async function (ctx) {
@@ -32,5 +32,5 @@ module.exports = function (dirname, port) {
             console.log(ctx.body);
         }
     });
-    app.listen(port);
+    app.listen(port, callback);
 }

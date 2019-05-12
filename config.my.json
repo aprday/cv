@@ -1,0 +1,83 @@
+{
+    "lang": "ch",
+    "i18n": {
+        "ch": {
+            "exp": "工作",
+            "erience": "经历",
+            "int": "实习",
+            "ernship": "经历",
+            "ski": "技",
+            "ll": "能",
+            "hon": "荣",
+            "or": "誉"
+        },
+        "en": {
+            "exp": "EXP",
+            "erience": "ERIENCE",
+            "int": "INT",
+            "ernship": "ERNSHIP",
+            "ski": "SKI",
+            "ll": "LL",
+            "hon": "HON",
+            "or": "OR"
+        }
+    },
+    "name": "孙晓旭",
+    "descript": "吉林大学 · 软件工程",
+    "email": "sunxiaoxujlu@163.com",
+    "mobile": "18844195530",
+    "website": "https://github.com/sophiasofar",
+    "experiences": [{
+        "title": "百度",
+        "descript": "FSG",
+        "date": "2016.07 – 至今",
+        "location": "中国, 北京",
+        "content": [{
+            "title": "获客中后台",
+            "info": "负责主动营销和广告投放相关项目是公司智能获客的主要渠道",
+            "duty": "项目/技术负责人",
+            "list": [
+                "使用 nodejs 作为服务中间层，通过 ORM 做了数据表结构的自动载入和缓存，完善邮件，bos 存储，gp 介入和定时调度等基础模块，并调研了 react/vue ssr 相关方案",
+                "打造基础构建工具和构建脚手架，简化构建的配置文件并维持良好的扩展性",
+                "针对 vuex， redux 等不同状态管理库开发了缩短了开发流程的状态管理工具，简化了数据流程",
+                "搭建内部包管理工具和前端线上编译机，并开发了 atom / vscode 的代码风格校验工具，横向支持公司业务"
+            ]
+        }, {
+            "title": "获客营销 H5",
+            "info": "通过投放相关落地页曝光产品含相关中后台",
+            "duty": "项目/技术负责人",
+            "list": [
+                "基于 vue 封装通用组件库，开发扩展性高的定制化文本编辑器 （vue / react）",
+                "开发极简的模板引擎并可以分别在 nodejs 和浏览器端使用",
+                "开发了基于 fis 的 vue 文件编辑插件、基于 webpack 的 vue-markdown 编译插件，善于使用 babel 相关库解决问题",
+                "多次在团队内组织分享，并推动新技术在组内的落地并有一定收益"
+            ]
+        }]
+    }],
+    "internships": [{
+        "title": "百度",
+        "descript": "糯米B端研发部 + 实习生",
+        "date": "2015.10 – 2016.06",
+        "location": "中国, 北京",
+        "content": [
+            "负责百度糯米B端 PC/移动端 部分功能开发"
+        ]
+    }, {
+        "title": "SAP LABS OF CHINA",
+        "descript": "SAP Anywhere Guideline + Intern",
+        "date": "2015.08 – 2015.10",
+        "location": "中国, 上海",
+        "content": [
+            "使用SAP 自研 MVVM 框架构建 SAP Anywhere 项目部分模块"
+        ]
+    }],
+    "skills": [
+        "熟悉 html/css/js 及 react/vue 等前端框架，对前端工程化有一定经验，对前后端分离以及同构有一定思考",
+        "有 nodejs 服务端的实践经验，实际使用过 php/python 开发项目，对 linux 有一定了解",
+        "有一定指导能力，前后带领过过 3 - 6 人团队以及若干实习生，可以合理拆解任务并预估风险"
+    ],
+    "honors": [
+        "2018 年 Q1 & Q3 - 广告投放团队 - 度小满精益战队奖",
+        "2017 年 - 导流营销投放团队 - 百度最高奖总裁特别奖"
+    ]
+}

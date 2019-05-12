@@ -25,4 +25,6 @@ pipe.match('./src/pug/index.pug').use(function (file, callback) {
 
 pipe.match('./src/assert/').dest('./dist/static');
 
-pipe.server(__dirname, 3000);
+pipe.server(__dirname, 3000, function () {
+    console.log('server start at http://localhost:3000 ');
+});

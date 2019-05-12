@@ -1,96 +1,104 @@
 {
-    "name": "孙晓旭",
-    "descript": "吉林大学 · 软件工程",
-    "email": "sunxiaoxujlu@163.com",
-    "mobile": "18844195530",
-    "website": "http://sophiasofar.github.io",
+    "lang": "ch",
+    "i18n": {
+        "ch": {
+            "exp": "工作",
+            "erience": "经历",
+            "int": "实习",
+            "ernship": "经历",
+            "ski": "技",
+            "ll": "能",
+            "hon": "荣",
+            "or": "誉",
+            "pro": "项目",
+            "jest": "经历"
+        },
+        "en": {
+            "exp": "EXP",
+            "erience": "ERIENCE",
+            "int": "INT",
+            "ernship": "ERNSHIP",
+            "ski": "SKI",
+            "ll": "LL",
+            "hon": "HON",
+            "or": "OR",
+            "pro": "PRO",
+            "jest": "JECT"
+        }
+    },
+    "name": "于沙",
+    "descript": "西北工业大学  ·  2011 - 2015软件工程",
+    "age": "1994.03.19",
+    "email": "358524128@qq.com",
+    "mobile": "15320158154",
     "experiences": [{
         "title": "百度",
-        "descript": "金融数据智能部 + FE",
-        "date": "Jul 2016 – Present",
-        "location": "中国, 北京",
-        "content": [{
-            "title": "智能获客-伯乐系统",
-            "info": "通过潜客挖掘、潜客管理、潜客触达，实现智能获客实验线上全流程管理及效果数据跟踪的平台工具。伯乐平台提高了获客效率和用户转化率，把现金贷触达周期，从1-2两周缩短至3天，累计用信人数超过30万",
-            "duty": "承担了伯乐系统的开发工作。作为伯乐平台的前端负责人，承担了项目的主要模块的开发",
-            "list": ["结合webpack在项目中的实际应用，抽取共有配置部分，提出了一套基于webpack的前端构建工具lucii，通过简单的配置，可以完成调试，打包，代理，mock数据和发布代码功能，由JSON的形式配置Api，可以简单快捷的构建项目,提高了伯乐平台的编译稳定行，降低了50%的构建时间",
-            "承担EDM营销系统的前端工作，调研并接入了VueJs/React等前端框架，搭建了整个项目的构建工具以及fis3-parser-vue-loader和webpack-add-assert-plugin等前端构建工具的插件，使得组内人员可以在高工作效率下保证产品的性能及用户体验"]
-            
-        }, {
-            "title": "智能获客-内容获客系统",
-            "info": "通过高响应人群白名单，获取用户感兴趣的文章通过nlp语言处理生成高质软文，智能发布到百家号。通过feed的文章曝光展示，提高了用户转化率和流量曝光",
-            "duty": "承担了内容获客所有技术难点的攻克, 独立完成了整个项目的代码结构和框架的搭建，基于VueJs打造了一个简易版前端编辑器并且在项目中接入NodeJs进行文章主题结构的抓取解析，文章内容保存同步等模块的开发。"
-        },  {
-            "title": "智能导流-导流营销系统",
-            "info": "综合统一管理客户物料，提高了机构广告投放效率，快速实现流量价值。累计接入7个渠道，70多家机构，曝光2KW/日",
-            "duty": "承担导流营销系统的前端工作, 根据项目需求，抽取项目中的公用组件，基于bootstrap样式开发组件样式库vue-bootstrap"
-        }]
-    }],
-    "internships": [{
-        "title": "百度",
-        "descript": "糯米B端研发部 + FE 实习生",
-        "date": "Oct 2015 – Jun 2015",
+        "descript": "产品经理",
+        "date": "2016.05 – 至今",
         "location": "中国, 北京",
         "content": [
-            "负责百度糯米B端 PC/移动端 部分功能开发",
-            "学习和 RD/PM/QA 沟通完成界面/接口设计，BUG跟踪与修复",
-            "学习使用 fis3/Jello 等前端构建工具完成开发工作"
+            "负责手百小说动漫娱乐垂类、push的内容推荐策略和平台建设",
+            "负责百度金融流量接入和管理，以及获客平台的建设"
         ]
     }, {
-        "title": "SAP LABS OF CHINA",
-        "descript": "SAP Anywhere Guideline + FE Intern",
-        "date": "Aug 2015 – Oct 2015",
-        "location": "中国, 上海",
+        "title": "美团点评",
+        "descript": "产品经理",
+        "date": "2014.12 – 2016.05",
+        "location": "中国, 北京",
         "content": [
-            "参与组内 OCC-Frontend-Guideline 框架的设计研发",
-            "使用Jquery构建 SAP Anywhere 项目部分模块"
+            "负责商家促销平台需求分析和产品设计，以及日常维护工作",
+            "负责商家营销大学、商家帮助中心产品设计"
         ]
     }],
     "projects": [{
-        "title": "LUCII",
-        "descript": "https://github.com/luciijs",
-        "content": "一套对Webpack2打包过程的轻封装,集成了调试,打包,代理,mock数据和发布代码功能，由JSON的形式配置Api,可以简单快捷的使用lucii构建项目"
+        "title": "手百 - 小说动漫Feed分发",
+        "duty": "负责小说动漫两大垂类在Feed的内容分发方案，和百家号、Feed、反作弊等各业务线协作提高产品DAU和时长",
+        "content": [
+            "调研分析小说动漫业务适合的Feed分发策略，进行产品整体规划，解决各分发场景的痛点",
+            "建设生产、审核、分发、点击和反作弊等转化漏斗，建设自动化物料去广告等资源解决方案",
+            "与Feed、百家号、ubs合作，跨部门组织团队完成直接分发、挂载分发、外部cp分润等功能的产品设计和优化"
+        ]
     }, {
-        "title": "Vue-bootstrap",
-        "descript": "https://github.com/sophiasofar/vue-bootstrap",
-        "content": "基于Vue开发的组件库，样式使用bootstrap，封装了项目中常见组件以及高级组件(table/editor等)"
+        "title": "手百 - Push",
+        "duty": "负责手百push平台和场景化建设，和编辑运营协作提高push点击率、渗透率和首调率",
+        "content": [
+            "负责push平台规划和设计，建设热点和地域物料库、智能标题、自动化推送、地图画圈等产品功能，提高推送时效性和精准性",
+            "调研手百用户需求分布，规划建设各细分场景提升push渗透率和首调率"
+        ]
     }, {
-        "title": "PipeJs",
-        "descript": "https://github.com/sophiasofar/pipe",
-        "content": "类似Gulp的异步文件处理器，使得文件构建和处理插件可以以中间件的方式调用"
+        "title": "百度金融 - 智能获客平台",
+        "duty": "为金融业务提供客群筛选、组合实验、投放管理、数据分析等线上一站式智能获客服务，整合获客、风控、产品策略，提升获客效率和效果",
+        "content": [
+            "负责组合实验、投放管理的产品设计和迭代管理，提升投放效率和roi",
+            "动态模型：基于人群数据、实验数据的后验分析和策略组合，实现test-learn和即时响应等动态投放",
+            "数据分析：建立效果数据、触达监控和客群回归分析，为投放和筛客进行效果分析"
+        ]
     }, {
-        "title": "Atom-xterm-plugin",
-        "descript": "http://github.com/sophiasofar/atom-xterm-plugin",
-        "content": "atom插件，提供了可以随意切换的终端控制台，样式类似于vscode terminal"
+        "title": "百度金融 - 自然流量导流项目",
+        "duty": "在百度内外部各渠道进行金融产品的强入口构建，实现百度有钱花品牌的曝光和机构导流",
+        "content": [
+            "渠道强入口构建：通过调整样式的行高、样式、是否出图和位置等A/B test实验，实现大搜原url点击正增长、导流入口点击+0.17%、大搜收益正向。从无到有接入大搜百科文库等内部外渠道7个、样式30+个",
+            "召回策略：对机构url进行特征学习，制定基于主域url和行业标签的挖掘机制、制定基于url->query分值过滤、负面情绪词过滤的筛选机制，使ubs评测准招率达到98%"
+        ]
     }, {
-        "title": "Atom-fecs-plugin",
-        "descript": "https://github.com/sophiasofar/atom-fecs-plugin",
-        "content": "atom插件，封装了fecs，可以在保存代码时完成icode代码检查工作，风格错误提示界面和icode保持一直，相比其他插件更加简单易用"
+        "title": "美团 - 商户自促项目",
+        "duty": "通过让商家自助设置促销，节省总部活动开支，面向用户建立“良性”价格形象，为商户找到高效的推广手段，布局商业产品",
+        "content": [
+            "负责商户自助营销平台日常的维护和迭代，满足商户和用户在多样化营销场景中的需求",
+            "制定促销活动在c端运营展位的展示策略，增加流量曝光和预算消耗",
+            "商家留存率课题：刻画促销活动结束行为及留存，针对不同场景的商家采用运营或者产品策略引导，达到留存率提高及预算设置消耗合理化"
+        ]
     }, {
-        "title": "Vscode-fecs-plugin",
-        "descript": "https://github.com/sophiasofar/vscode-fecs-plugin",
-        "content": "vscode的fecs代码风格检查插件，在Windows和Mac上都有很好的兼容性"
-    },{
-        "title": "REACT-EDITOR",
-        "descript": "http://sophiasofar.github.io/react-editor",
-        "content": "基于DraftJs打造的编辑器"
-    },{
-        "title": "MY DIARY",
-        "descript": "http://sophiasofar.github.io/diary",
-        "content": "一个在线日记生成系统,修改自github上的一个开源项目,改变了原有的Hexo模式的Markdown预编译,动态加载Markdown并翻译成html文本,使用者只需编写上传Markdown文件就可以在线查看"
-    },{
-        "title": "TplJs",
-        "descript": "https://github.com/sophiasofar/tpl",
-        "content": "源于20行代码打造一个模板引擎，加上一点个人思考生成的项目。可以用来编译类似underscore的模板语言。"
-    },{
-        "title": "CV",
-        "descript": "https://github.com/sophiasofar/cv",
-        "content": "简历生成器, 根据Json的简单配置，在加上个人打造的文件处理器,可以快速打造个人简历"
+        "title": "美团 - 商户评价营销项目 ",
+        "duty": "针对头腰部、重决策等类型的商户推出口碑管理工具，提升用户评价的内、外驱力，提高商家的评价维护效率",
+        "content": [
+            "分析、调研各类型商户的口碑管理痛点，确定产品营销模式、业务范围及项目方向",
+            "与UGC、各品类业务方协调，组织团队完成促评活动、自定义红包样式、快捷回复等功能的产品设计和开发"
+        ]
     }],
-    "skills": [
-        "熟悉已标准化的HTML5/CSS3新特性，熟悉ECMAScript（JavaScript）面向对象，能完成桌面 / 移动端前端组件与 AJAX 数据交互的开发",
-        "熟悉jQuery/AngularJs/VueJs的使用,阅读过部分源代码,了解过React的简单使用,使用过 Less 等预处理工具",
-        "了解后端编程,熟悉J2EE/PHP,有使用Servelet/Struts/Thinkphp的后台框架进行开发的经验",
-        "熟练使用 MySQL/Oracle数据库，掌握基本Sql语句，了解Nosql数据库, Linux使用经验，熟悉常用命令与配置，编写简单的 Shell 脚本"
+    "honors": [
+        "2017-2018 年 - 手百 -  3个百度小赞奖、精益求精奖",
+        "2016 年 -  百度金融 -  百度最高奖总裁特别奖、最具行动力奖",
+        "2015 年 -  美团点评 -  新美大-最佳团队奖"
     ]
 }

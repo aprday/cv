@@ -52,16 +52,21 @@ block header
         .name #{name}
         .descript.red #{descript}
         .descript
-            a(href= website,target= '_blank').website.divider #{website}
-            .email.divider #{email}
+            if website
+                a(href= website,target= '_blank').website #{website}
+            if age
+                .age #{age}
+                .space
+            .email #{email}
+            .space
             .mobile #{mobile}
 
 
 mixin list(content)
     if Array.isArray(content)
-        ul.list
+        ul
             each list in content
-                li.list-item
+                li.circle
                     +list(list)
     else
         span= content
@@ -70,15 +75,15 @@ block experience
     section
         .heading.underline
             .text.experience
-                span.red EXP
-                span ERIENCE
+                span.red= i18n[lang]['exp']
+                span= i18n[lang]['erience']
         each item in experiences
             .subsection
-                span.title.divider= item.title
-                span.descript= item.descript
+                span.title= item.title
+                span.descript.divider= item.descript
                 .label
-                    span.date.divider= item.date
-                    span.location.red= item.location
+                    span.date= item.date
+                    span.location.red.divider= item.location
                 br
                 .content
                     - var content = item.content;
@@ -86,16 +91,16 @@ block experience
                         ul
                             each block in content
                                 if typeof block ===  'string'
-                                    li.arrow= block
+                                    li.circle= block
                                 else
                                     - var title = block.title;
                                     - var list  = block.list;
                                     - var info = block.info;
                                     - var duty = block.duty;
                                     li
-                                        h4.arrow= title
-                                        div.info= info
-                                        div.duty= duty
+                                        h4= title
+                                        div= info
+                                        div= duty
                                         +list(list)
                     else
                         span= content
@@ -105,40 +110,42 @@ block internship
     section
         .heading.underline
             .text.internship
-                span.red INT
-                span ERNSHIP
+                span.red= i18n[lang]['int']
+                span= i18n[lang]['ernship']
         each item in internships
             .subsection
-                span.title.divider= item.title
-                span.descript= item.descript
+                span.title= item.title
+                span.descript.divider= item.descript
                 .label
-                    span.date.divider= item.date
-                    span.location.red= item.location
+                    span.date= item.date
+                    span.location.red.divider= item.location
                 br
                 .content
                     - var content = item.content;
                     if Array.isArray(content)
                         ul
                             each text in content
-                                li.arrow= text
+                                li= text
                     else
                         span= content
 block project
     section
         .heading.underline
             .text.project
-                span.red PRO
-                span JECT
+                span.red= i18n[lang]['pro']
+                span= i18n[lang]['jest']
         each item in projects
             .subsection
-                span.title.divider= item.title
-                a(href= item.descript, target= '_blank').descript= item.descript
+                span.title= item.title
+                if item.descript
+                    a(href= item.descript, target= '_blank').descript.divider= item.descript
+                div(style='margin: 8px 0;')= item.duty
                 .content
                     - var content = item.content;
                     if Array.isArray(content)
                         ul
                             each text in content
-                                li.arrow= text
+                                li.circle= text
                     else
                         span= content
 
@@ -146,9 +153,20 @@ block skill
     section
         .heading.underline
             .text.skill
-                span.red SKI
-                span LL
+                span.red=  i18n[lang]['ski']
+                span= i18n[lang]['ll']
         .subsection
             ul
                 each item in skills
-                    li.point= item
+                    li.check= item
+
+block honor
+    section
+        .heading.underline
+            .text.honor
+                span.red= i18n[lang]['hon']
+                span= i18n[lang]['or']
+        .subsection
+            ul
+                each item in honors
+                    li.star= item

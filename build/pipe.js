@@ -71,8 +71,8 @@ Pipe.prototype = {
     match(pattern, reg) {
         return new Task(pattern, reg, this.descript);
     },
-    server(dirname, port) {
-        return server(dirname, port);
+    server(dirname, port, callback) {
+        return server(dirname, port, callback);
     }
 }
 
