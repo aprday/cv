@@ -1,8 +1,9 @@
 {
-  "name": "resume",
+  "name": "cv",
   "version": "1.0.0",
-  "description": "",
+  "description": "my cv",
   "main": "index.js",
+  "keywords": "cv",
   "dependencies": {},
   "devDependencies": {
     "bootstrap": "^4.0.0-beta",
